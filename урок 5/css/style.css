@@ -1,0 +1,109 @@
+.block1{
+    margin: 40px 0 40px 0;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color:yellow;
+    border-radius: 50%;
+}   
+.block1::before{
+    position: absolute;
+    top:-40px;
+    display:block;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: red; 
+    border-radius: 50%;
+}
+.block1::after{
+    position: absolute;
+    display:block;
+    top: 40px;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-color: green;
+    border-radius: 50%;
+}
+.block1:active{
+    background-color: aqua;
+}
+table {
+    border: 1px solid black;
+    border-top: none;
+    border-left: none;
+    position: relative;
+}
+table::before{/*убираю лишнюю черту в таблице сверху*/
+    content: '';
+    position: absolute;
+    display: block;
+    width: 2px;
+    height: 33px;
+    background-color: white;
+    right:-1px;
+    top: 0;
+}
+table::after{/*убираю лишнюю черту в таблице снизу*/
+    content: '';
+    position: absolute;
+    display: block;
+    width: 31px;
+    height: 2px;
+    background-color: white;
+    left:0;
+    bottom: -1px;
+}
+td{
+    width: 50px;
+    height: 50px;
+    border: 1px black solid;
+}
+tr:nth-child(2n-2) td:nth-child(2n-2){
+    background-color: brown;
+}
+tr:nth-child(2n-3) td:nth-child(2n-3){
+    background-color: brown;
+}
+tr:first-child td:nth-child(n){
+    
+    border-left-color: grey;
+    border-right-color: grey;
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    background-color: whitesmoke;
+    height: 25px;
+}
+tr:nth-child(n) td:first-child {
+    border-left:none;
+    border-right: none;
+    border-top-color: gray;
+    border-bottom-color: gray;
+    background-color: whitesmoke;
+    text-align: center;
+    font-family: arial;
+    font-weight: bold;
+    width: 25px;
+}
+tr:nth-child(2) td:first-child {
+    border-top: none;
+}
+tr:last-child td:first-child {
+    border-bottom: none;
+}
+tr:first-child td:nth-child(2) {
+    border-left: none;
+}
+tr:first-child td:last-child  {
+    border-right: none;
+}
+
+tr:first-child  td:first-child{
+    border: none;
+    background-color: white
+}
