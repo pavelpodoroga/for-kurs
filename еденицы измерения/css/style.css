@@ -1,0 +1,45 @@
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/**********/
+body{
+ /*   background: url(../im/weather.png)center top no-repeat;*/
+    
+}
+.wrapper{
+    margin: 0  auto;
+    width: 407px;
+    height: 195px;
+}
+
+.children{
+    margin-left: 0.3%;
+    float: left;
+    width: 33%;
+    height: inherit;
+}
+.data{
+    
+    display: block;
+    width: 100%;
+    height: 31px;
+    color:white;
+    margin-top: 1px;
+    font-size: 1.6em;
+    text-align: center;
+    background-color: rgb(0,151,185);
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+.temperature{
+    margin-top: 8px;
+    font-size: 2rem;
+    display: block;
+    text-align: center;
+    
+}
