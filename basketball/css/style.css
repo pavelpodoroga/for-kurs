@@ -1,0 +1,221 @@
+@keyframes nameAnim {
+    
+    0%{ 
+        transform: rotate(0deg) ;
+        
+    }
+    100%{
+        transform: rotate(785deg) ;
+    }
+} 
+@keyframes avtokey{
+    0%{
+        transform: translate(0,0)rotate(0deg);
+    }
+    /*---*/
+    30%{
+        transform: translate(130px,0)rotate(0deg);
+    }
+    35%{
+        transform: translate(140px,0)rotate(-3deg);
+        transform-origin: left;
+    }
+    43%{
+        transform: translate(180px,0)rotate(-0deg);
+    }
+    /****/
+    60%{
+        transform: translate(265px,0)rotate(0deg);
+        transform-origin: right;
+    }
+    65%{
+        transform: translate(275px,0)rotate(3deg);
+    }
+    73%{
+        transform: translate(315px,0)rotate(0deg);
+    }
+    100%{
+        transform: translate(520px,0)rotate(0deg);
+    }
+
+}
+
+@keyframes basketball{
+    0%{
+        transform: translate(0,0);
+        
+    }
+    
+    90%{
+        transform: translate(0,231px) scaleX(1) scaleY(1);
+    }
+    100%{
+        transform: translate(0,233px) scaleX(1.2) scaleY(0.8);
+        transform-origin: bottom;
+    }
+}
+@keyframes shadow{
+    0%{
+        transform: translate(0,0) scale(1.5,1.5);
+        box-shadow: 0px 30px 10px rgba(0,0,0,.3);   
+    }
+    90%{
+ transform: translate(-100px,100px) scale(1,0.6); 
+     box-shadow: 0px 30px 10px rgba(0,0,0,.99);
+    }
+    100%{
+ transform: translate(-100px,100px) scale(1,0.6); 
+     box-shadow: 0px 30px 10px rgba(0,0,0,.99);
+    }
+}
+/*  }
+ 
+   40%{
+        transform: translate(270px,-50px) rotate(500deg) ;
+
+    }
+    60%{
+        transform: translate(340px,-50px) rotate(571deg) ;
+
+    }
+    80%{
+        transform: translate(340px,-50px) rotate(571deg) ;
+
+    }
+ 
+*/
+
+
+
+.wheel{
+    position: absolute;
+  
+    width: 35px;
+    height:35px;
+    border-radius: 50%;
+    background-image: url(../im/wheel.png);
+    background-size: cover;
+    margin-top: 100px;
+    animation: nameAnim 5s ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
+}
+.w1{
+      bottom: -5px;
+    left: 150px;
+}
+.w2{
+      bottom: -5px;
+    left: 13px;
+}
+.road{
+    position: relative;
+    width: 900px;
+    height: 300px;
+    border-bottom: 3px solid black;
+
+}
+.avto{
+    position: absolute;
+    bottom: 4px;
+    background-image: url(../im/car.png);
+    background-size: cover;
+    width:204px;
+    height: 69px;
+    animation: avtokey 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.policeman{
+    position: absolute;
+    border-bottom: 7px solid black;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	height: 0;
+	width: 10px;
+    bottom: 0;
+    left: 300px;
+}
+.basketball{
+    position: relative;
+    width: 600px;
+    height: 300px;
+    border-bottom: 3px solid black;
+}
+.ball{
+    margin-left: 250px;
+    background-image: url(../im/ball.png);
+    width: 80px;
+    height: 70px;
+    background-size:cover;
+    animation: basketball 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function:cubic-bezier(0.720, 0.000, 1.000, 1.000);
+}
+
+.shadow{
+    position: absolute;
+    bottom: 110px;
+    left: 360px;
+    width:60px;
+    height: 20px;
+    border-radius: 50%;  
+    animation: shadow 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function:cubic-bezier(0.720, 0.000, 1.000, 1.000);
+    /*
+    box-shadow: 0px 30px 10px black;
+        margin-left: 259px;
+    margin-top: 182px;*/
+}
+/**2pr*/    
+    
+
+
+
+
+
+/*@keyframes animation-name{
+    0%{
+        width: 100px;
+        height: 100px;
+    }
+    10%,60%{
+        width: 200px;
+        height: 200px;
+    }
+    40%,80%{
+        width: 100px;
+        height: 100px;
+    }
+    100%{
+        width: 200px;
+        height: 200px;
+    }
+    
+}
+
+
+div{
+    width:200px;
+    height: 200px;
+    background-color: black;
+    animation: ;
+    animation-name: transform;
+    animation-duration: 2s;
+    animation-timing-function: ;
+    animation-fill-mode: forwards;
+    animation-direction: alternatea;/**напрвление анимации*/
+  /*  animation-delay: */
+    
+
+
+
+/*баскетюольный мяч, падает с ускорением, деформируется прыгает вверх*/
+
+/*машинка колеса нарисовать и прехать лежачих полицейских*/
+
+
