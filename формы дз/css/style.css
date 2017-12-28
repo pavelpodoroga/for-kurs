@@ -1,0 +1,101 @@
+/**
+Форма находится по центру экрана по горизонтали. 
+
+Размеры 
+- форма - 400пикс, может быть увеличена. Все элементы должны отзывчиво перерисовываться без дополнительного редактирования  CSS
+- все элементы/поля формы - 32пикс по высоте, все свободное пространство по ширине
+- поля формы - 25 пикс
+- расстояние между элементами формы - 10 пикс
+- цвета - пипеткой, либо на глаз
+*/
+
+
+body{
+    background-color: #e8e8e8;
+    font-family: arial, sans-serif;
+}
+.wrapper{
+    margin: 0 auto;
+    padding: 0;
+    width: 400px;
+    background-color: white;
+
+}
+.header{
+    padding:25px;
+    box-sizing:border-box;
+    width:  inherit;
+    border-bottom: 1px solid #e4edf2;
+    color: gray;
+    margin: 0;
+    position: relative;    
+
+}
+
+form *{
+    display: inline-block;
+    box-sizing:border-box;
+    border-radius: 6px;
+    border: 2px solid #e4edf2;
+    width: calc(50% - 5px);
+    height: 32px;
+    margin: 5px 10px 5px 0;
+    font-size: initial;
+    color: silver;
+
+
+
+}
+form{
+    box-sizing:border-box;
+    font-size: 0;
+    padding: 25px;
+    display: block;
+    width:inherit;
+    overflow:hidden;
+    
+}
+
+form input:nth-of-type(1){
+    width: 100%;
+}
+form :nth-child(2n+1){
+    margin-right:0;   
+}
+form:first-child{
+    margin-bottom:0;
+}
+form .cvv{
+    font-size: 12px;
+    color: silver;
+    vertical-align: top;
+    border: none;
+
+   
+}
+input[type="submit"]{
+    width: 100%;
+    background-color: #44c94a;
+    border: none;
+    color:white;
+}
+a{
+    width: 100%;
+    background-color: #009de1;
+    border: none;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    padding-top: 6px;
+    margin-bottom: 0;
+    
+}
+a span{
+    display: inline;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-style: italic;
+    
+
+}
