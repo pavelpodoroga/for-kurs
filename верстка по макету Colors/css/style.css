@@ -1,0 +1,301 @@
+ /*@font-face {
+  font-family: MyHelvetica;
+  src: local("Helvetica Neue Bold"),
+       local("HelveticaNeue-Bold"),
+       url(MgOpenModernaBold.ttf);
+  font-weight: bold;
+}*/
+/*500; 100
+200;
+*/
+
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*****/
+body{
+margin: 0;
+padding: 0;
+font-family: "Open Sans", sans-serif;
+    color: white;
+        
+}
+.wrapperHeader{
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f74c55;
+    overflow: hidden;
+}
+
+.wrapperHeader::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color: #fb636b;
+    border-radius: 50% 50% 50% 50%;
+    right: 50%;
+    bottom: -50%;
+    z-index: 0;
+
+}
+header{
+    position: relative;
+    z-index: 2;
+}
+header{
+    width: 1024px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.logo{
+    float: left;
+    background:url(../im/logo.png) center center no-repeat;
+    width: 130px;
+    height: 72px;
+}
+
+nav{
+    margin-top: 14px;
+    float: right;
+    width: 50%
+}
+nav ul{
+    color: white;
+    list-style: none;
+    font-size: 0;
+    float: right;
+    padding-left: 10px;
+    position: absolute;
+    right: 0;
+}
+nav ul>*{
+    
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    margin-right: 10px;
+}
+nav li{
+    padding-top: 8px;
+    line-height: 30px;
+    display: inline-block;
+    padding-right: 22px;
+    text-transform: uppercase;
+    font-weight:300;  
+    
+}
+nav  a{
+    display: block;
+    padding: 0 5px;
+    border-radius: 6px;
+}
+
+
+.headerContainer{
+    margin-top: 34.4vh;
+    float: right;
+    width: 44%;
+}
+
+.headerContainer p{
+    font-size: 16px;
+    font-weight: 300;
+}
+.headerContainer span{
+    font-size: 40px;
+    display: block;
+}
+a{
+    color: white;
+    text-decoration: none;
+    
+}
+/*компонент кнопки */
+.btn {
+    padding: 0px 20px 5px 20px;
+    font-size: 24px;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: normal;
+    margin: 20px 0;  
+    display: inline-block;
+}
+.btn:hover{
+    background-color:  #fb636b; 
+}
+/** если нужно поставить кнопку на белом фоне*/
+.btn_dark {
+    border: 2px solid #404040;
+    color: #404040;
+}
+
+/**********/
+
+
+
+.wrapperMain{
+    width: 100%;
+}
+.MainContent{
+    box-sizing: border-box;
+    margin: auto;
+    width: 1024px;
+    padding: 55px 90px 100px 90px;
+}
+
+.MainContent__Title{
+    display: inline-block;
+    color: #000000;
+    font-size: 30px;
+    font-weight: 300;
+    position: relative;
+}
+/* анимация сылки*/
+.MainContentain h2:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fb636b;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.MainContent h2:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/* конец анимации*/
+
+.MainContent p{
+    margin-bottom: 50px;
+    color: #404040;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+/*компонент цветные блоки*/
+.colorBlock{
+    display: flex;
+    height:  32px;
+    list-style: none;
+    padding-left: 0;
+}
+.colorBlock__colorItem{
+    width: 36px;
+    height: inherit;
+}
+.colorBlock__colorItem-orange {
+
+    background-color:#ee732f;
+}
+.colorBlock__colorItem-pink {
+    background-color:#f74c55;
+}
+.colorBlock__colorItem-green {
+    background-color:#2d5f3b;
+}
+.colorBlock__colorItem-gray {
+    background-color:#404040;
+}
+.colorBlock__colorItem-lightpink {
+    background-color:#fb636b;
+}
+/*********/
+
+.FooterWrapper{
+    position: relative;
+
+}
+.SectionFooter {
+    margin: auto;
+    display: flex; 
+    width: 1024px;
+    justify-content: center;
+}
+.SectionFooter__column{
+    position: relative;
+    padding: 30px;
+    padding-bottom: 90px;
+}
+.SectionFooter::before {
+    content: "";
+    display: block;
+    background-color: #2d5f3b;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+.SectionFooter__column-title{
+    display: inline-block;
+    position: relative;
+    margin: 0;
+    font-weight: normal;
+}
+.SeoIcon{
+    padding-left: 43px;
+    background: url(../im/seo.png)center left no-repeat;
+}
+.ResponsiveIcon{
+    padding-left: 43px;
+    background: url(../im/resp.png)center left no-repeat;    
+}
+.ServicesIcon{
+    padding-left: 43px;
+    background: url(../im/cloud.png)center left no-repeat;    
+
+}
+/* анимация сылки*/
+.storeWrapper h2:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.storeWrapper h2:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+/* конец анимации*/
+
+.SectionFooter__column a{
+    display: inline-block;
+}
+.SectionFooter__column p {
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+.SectionFooter__column-colorGray{
+    background-color: #404040;
+}
+
+.SectionFooter__column-colorPink{
+    background-color: #f74c55;
+}
+
+.SectionFooter__column-colorGreen{
+    background-color: #2d5f3b;
+}
+
