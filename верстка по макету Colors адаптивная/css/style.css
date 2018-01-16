@@ -1,0 +1,406 @@
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/*****/
+body{
+margin: 0;
+padding: 0;
+font-family: "Open Sans", sans-serif;
+    color: white;
+        
+}
+a{
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.wrapperHeader{
+    padding: 0;
+    position: relative;
+    width: 100%;
+    
+    min-height: 400px;
+    height: 100vh;
+    background-color: #f74c55;
+    overflow: hidden;
+}
+
+.wrapperHeader::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    background-color: #fb636b;
+    border-radius: 50% 50% 50% 50%;
+    right: 50%;
+    bottom: -50%;
+    z-index: 0;
+
+}
+
+header{
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    margin: 0;
+}
+
+.logo{
+    float: left;
+    background:url(../im/logo.png) center center no-repeat;
+    width: 130px;
+    height: 72px;
+}
+
+.MainNavigation{
+    margin-top: 14px;
+    width: 50%;
+    float: right;
+}
+.MainNavigation>ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.mobileButton a{
+    display: block;
+}
+.MainNavigation--Buttons{
+    list-style: none;
+    padding-left: 10px;
+}
+
+.headerContainer{
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top:  15vh;
+    padding: 0 20px;
+}
+.headerContainer p{
+    font-size: 1rem;
+    font-weight: 300;
+}
+.headerContainer span{
+    font-size: 2.5rem;
+    display: block;
+}
+.wrapperMain{
+    width: 100%;
+}
+.MainContent{
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0 20px;
+
+}
+
+.MainContent__Title{
+    margin: 0;
+    display: inline-block;
+    color: #000000;
+    font-size: 1.875rem;
+    font-weight: 300;
+}
+.MainContent p{
+    color: #404040;
+    font-size: 0.875rem;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+
+
+.SectionFooter {
+    margin: auto;
+    display: flex; 
+    justify-content: center;
+}
+
+.FooterWrapper{
+    width: 100%;
+}
+.SectionFooter {
+    display: flex; 
+    justify-content: center;
+    flex-direction: column;
+}
+.SectionFooter__column{
+    box-sizing: border-box;
+    padding: 10px 20px;
+    width: 100%;   
+}
+.SectionFooter__column-title{
+    display: inline-block;
+    margin: 0;
+    font-weight: normal;
+}
+.SectionFooter__column a{
+    display: inline-block;
+}
+.SectionFooter__column p {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: white;
+}
+.SectionFooter__column-colorGray{
+    background-color: #404040;
+}
+
+.SectionFooter__column-colorPink{
+    background-color: #f74c55;
+}
+
+.SectionFooter__column-colorGreen{
+    background-color: #2d5f3b;
+}
+
+/*адаптивность**/
+/*для мобильных телевонов*/              
+@media screen and  (max-width: 412px){    
+    .mobileButton{
+        float: right;
+        display: block;
+        position: relative;
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        border: 2px solid white;
+        border-radius: 4px;
+        font-size: 3.125rem;
+        line-height: 50px;
+        padding: 0;
+        text-align: center;
+        background: 
+                    url(../im/line.jpg)center 30% no-repeat,
+                    url(../im/line.jpg)center 50% no-repeat,
+                    url(../im/line.jpg)center 70% no-repeat;
+        background-color: #fb636b;  
+    }
+    .MainNavigation--Buttons{
+        position: absolute;
+        right: 0;
+        top: 52px;
+        padding-left: 14px;
+        width: 300%;
+        overflow: hidden;
+        height: 0;
+        list-style: none;
+        font-size:0.875rem;
+        text-align: left; 
+        background-color: #404040;
+    }
+    .mobileButton:hover .MainNavigation--Buttons {
+        overflow: visible;
+        height:auto;
+    }
+
+    
+    
+}
+/*для планшетов*/
+@media screen and  (min-width: 413px) and (max-width: 1023px) {
+    .MainNavigation{
+        margin-top: 0;
+        float: right;
+        width: 0%
+    }
+    .MainNavigation--Buttons{
+        padding-top: 0;
+        margin-top: 0;
+        width: 50vw;
+        font-size: 0;
+        float: right;
+        padding-left: 10px;
+        position: absolute;
+        right: 0
+    }
+    .MainNavigation--Buttons li{
+        display: inline-block;
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        margin-right: 10px;
+        padding-top: 8px;
+        line-height: 30px;
+        display: inline-block;
+        padding-right: 22px;
+        text-transform: uppercase;
+        font-weight:300; 
+    }
+        .headerContainer{
+        margin-top: 34.4vh;
+        float: right;
+        width: 44%;
+}
+    .SectionFooter {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .SectionFooter__column {
+        flex-basis:50%;
+    }
+}
+/*для desktop*/
+@media screen and (min-width: 1024px){
+    header{  
+        width: 1024px;
+        height: 100%;
+        margin: 0 auto;
+    }     
+    .MainNavigation{
+        margin-top: 10px
+    }
+    
+    .MainNavigation--Buttons li{  
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 1rem;
+        font-family: "Open Sans", sans-serif;
+        margin-right: 10px;
+        line-height: 30px;
+        display: inline-block;
+        padding-right: 22px;
+        text-transform: uppercase;
+        font-weight:300;  
+    }
+    .MainNavigation--Buttons  a{
+        display: block;
+        padding: 0 5px;
+        border-radius: 6px;
+    
+    }
+    .headerContainer{
+        margin-top: 30vh;
+        float: right;
+        width: 44%;
+    }
+    .MainContent{
+        width: 1024px;
+        padding: 70px 90px 100px 90px;
+    }
+    .FooterWrapper{
+        position: relative;
+
+    }
+    .SectionFooter {
+        position: relative;
+        margin: auto;
+        width: 1024px;
+        flex-direction: row;
+    }
+    .FooterWrapper::before {
+    content: "";
+    display: block;
+    background-color: #2d5f3b;
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+}
+    .SectionFooter__column{
+    position: relative;
+    padding: 30px;
+    padding-bottom: 90px;
+    }
+}
+
+
+/***/
+
+
+/*омпоненты*********/
+.SectionFooter__column-colorGray{
+    background-color: #404040;
+}
+
+
+/*компонент кнопки */
+.btn {
+    padding: 0px 20px 5px 20px;
+    font-size: 1.5rem;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: normal;
+    margin: 20px 0;  
+    display: inline-block;
+}
+.btn:hover{
+    background-color:  #fb636b; 
+}
+/** если нужно поставить кнопку на белом фоне*/
+.btn_dark {
+    border: 2px solid #404040;
+    color: #404040;
+}
+
+/**/
+
+/*компонент анимация ссылок*/
+.linkAnimation-pink{
+    transition:all 0.3s ease;    
+}
+.linkAnimation-pink:hover{
+        background:#fb636b;
+
+}
+.linkAnimation-gray{
+    transition:all 0.3s ease;    
+}
+.linkAnimation-gray:hover{
+        background-color:darkgray;
+
+}
+
+/*компонент цветные блоки*/
+.colorBlock{
+    margin-top: 50px;
+    display: flex;
+    height:  32px;
+    list-style: none;
+    padding-left: 0;
+}
+.colorBlock__colorItem{
+    width: 36px;
+    height: inherit;
+}
+.colorBlock__colorItem-orange {
+
+    background-color:#ee732f;
+}
+.colorBlock__colorItem-pink {
+    background-color:#f74c55;
+}
+.colorBlock__colorItem-green {
+    background-color:#2d5f3b;
+}
+.colorBlock__colorItem-gray {
+    background-color:#404040;
+}
+.colorBlock__colorItem-lightpink {
+    background-color:#fb636b;
+}
+
+/* Иконки для заголовков**/
+.SeoIcon{
+    padding-left: 43px;
+    background: url(../im/seo.png)center left no-repeat;
+}
+.ResponsiveIcon{
+    padding-left: 43px;
+    background: url(../im/resp.png)center left no-repeat;    
+}
+.ServicesIcon{
+    padding-left: 43px;
+    background: url(../im/cloud.png)center left no-repeat;    
+
+}
+
+
+/*********/
